@@ -1,8 +1,17 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req,res) => {
+// API v1
+const vocabularyRoute = require('./api/v1/vocabulary-route');
+
+app.use('/vocabulary', vocabularyRoute);
+
+app.get('/', (req, res) => {
     res.send('Hello World');
+});
+
+app.get('*', (req, res) => {
+    res.status(400).send('Not found');
 });
 
 app.listen(3000, () => {
