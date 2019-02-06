@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "neo4j-driver": "^1.7.2"
   },
   "devDependencies": {
     "@types/express": "^4.16.1",
